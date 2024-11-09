@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="main">#E06408</color>
+    <color name="secondary">#F89B56</color>
+    <color name="tertiary">#333333</color>
+    <!-- Color Message -->
+    <color name="primary">#E06408</color>
+    <color name="danger">#EE370F</color>
+    <color name="success">#0F5132</color>
+    <color name="warning">#997404</color>
 </resources>

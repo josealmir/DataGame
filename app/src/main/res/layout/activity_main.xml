@@ -51,7 +51,10 @@
                 android:id="@+id/txtPlayerName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nome do Jogador" />
+                android:backgroundTint="@color/main"
+                android:hint="Nome do Jogador"
+                android:textColorHighlight="@color/main"
+                android:textColorLink="@color/main" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -62,8 +65,10 @@
                     android:id="@+id/btnStartGame"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Iniciar Jogo"
-                    android:enabled="false"/>
+                    android:backgroundTint="@color/main"
+                    android:enabled="true"
+                    android:fadeScrollbars="true"
+                    android:text="Iniciar Jogo" />
             </LinearLayout>
 
         </com.google.android.material.textfield.TextInputLayout>
