@@ -12,6 +12,76 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PlayerName"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="68dp" />
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="409dp"
+        android:layout_height="162dp"
+        app:srcCompat="@drawable/dicee_logo"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="157dp" />
+
+    <Button
+        android:id="@+id/btnRoll"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:text="Roll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLeft"
+        app:layout_constraintVertical_bias="0.5"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imageView,txtPlayerName" />
+
+    <ImageView
+        android:id="@+id/imgLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btnRoll"
+        app:layout_constraintEnd_toStartOf="@+id/imgRight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/dice1" />
+
+    <ImageView
+        android:id="@+id/imgRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btnRoll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgLeft"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/dice2" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="imageView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="btnRoll" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
