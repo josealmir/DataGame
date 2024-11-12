@@ -40,7 +40,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        tools:layout_editor_absoluteX="1dp">
+        tools:layout_editor_absoluteX="1dp"
+        tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -52,7 +53,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/main"
-                android:hint="Nome do Jogador"
+                android:hint="@string/playerName"
+                android:layout_margin="20dp"
                 android:textColorHighlight="@color/main"
                 android:textColorLink="@color/main" />
 
@@ -66,9 +68,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/main"
-                    android:enabled="true"
+                    android:enabled="false"
                     android:fadeScrollbars="true"
-                    android:text="Iniciar Jogo" />
+                    android:text="@string/startGame"
+                    android:layout_margin="20dp"
+                    />
             </LinearLayout>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -79,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_begin="0dp" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"

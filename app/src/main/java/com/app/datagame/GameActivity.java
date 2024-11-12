@@ -20,7 +20,7 @@ import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
 
-    private int [] diceeArray = {
+    private final int [] diceeArray = {
         R.drawable.dice1,
         R.drawable.dice2,
         R.drawable.dice3,
@@ -59,7 +59,7 @@ public class GameActivity extends AppCompatActivity {
                 int diceLeft = getNumber();
                 imageViewLeft.setImageResource(diceeArray[diceLeft]);
 
-                String message = "Total: " + (diceRight + diceLeft + 2);
+                String message = "Resultado: " + (diceRight + diceLeft + 2);
 
                 Toast.makeText(GameActivity.this, message , Toast.LENGTH_SHORT).show();
             }

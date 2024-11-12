@@ -12,26 +12,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PlayerName"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="35dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="409dp"
         android:layout_height="162dp"
-        app:srcCompat="@drawable/dicee_logo"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="157dp" />
-
-    <Button
-        android:id="@+id/btnRoll"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:text="Roll"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgLeft"
+        app:layout_constraintBottom_toTopOf="@+id/imgLeft"
+        app:layout_constraintTop_toBottomOf="@+id/txtPlayerName"
         app:layout_constraintVertical_bias="0.5"
-        tools:layout_editor_absoluteX="1dp" />
+        app:srcCompat="@drawable/dicee_logo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group3"
@@ -45,7 +55,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/btnRoll"
         app:layout_constraintEnd_toStartOf="@+id/imgRight"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.31"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.5"
@@ -75,13 +85,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_percent="0.0" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="left"
+        app:constraint_referenced_ids="btnRoll" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03009576" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <Button
+        android:id="@+id/btnRoll"
+        android:layout_width="384dp"
+        android:layout_height="43dp"
+        android:layout_margin="20dp"
+        android:text="@string/roll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
         app:constraint_referenced_ids="btnRoll" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
